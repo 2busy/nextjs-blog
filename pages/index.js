@@ -14,7 +14,7 @@ export default function Home({ allPostsData }) {
       </Head>
       <section className={utilStyles.headingMd}>
         <p>
-          Hello, I’m <strong>Sara Ray</strong> the hardest working assistant in
+          Hello, I’m <strong>Bobby</strong> the hardest working assistant in
           the biz!.
         </p>
         <p>
