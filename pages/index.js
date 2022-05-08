@@ -49,6 +49,28 @@ export default function Home({ allPostsData }) {
           />
         </div>
       </section>
+      <section>
+        <div>
+          <Image
+            src='/images/landingpage2.webp'
+            alt='Picture of Landing Page One'
+            height={950}
+            width={2300}
+            layout='responsive'
+          />
+        </div>
+      </section>
+      <section>
+        <div>
+          <Image
+            src='/images/landingpage3.webp'
+            alt='Picture of Landing Page One'
+            height={950}
+            width={2300}
+            layout='responsive'
+          />
+        </div>
+      </section>
     </Layout>
   );
 }
