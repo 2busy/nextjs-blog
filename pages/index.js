@@ -1,9 +1,10 @@
-import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
-import utilStyles from '../styles/utils.module.css'
-import { getSortedPostsData } from '../lib/posts'
-import Link from 'next/link'
-import Date from '../components/date'
+import Head from 'next/head';
+import Layout, { siteTitle } from '../components/layout';
+import utilStyles from '../styles/utils.module.css';
+import { getSortedPostsData } from '../lib/posts';
+import Link from 'next/link';
+import Date from '../components/date';
+import Image from 'next/image';
 
 export default function Home({ allPostsData }) {
   return (
@@ -13,11 +14,12 @@ export default function Home({ allPostsData }) {
       </Head>
       <section className={utilStyles.headingMd}>
         <p>
-          Hello, I’m <strong>Sara Ray</strong> the hardest working assistant in the biz!.
+          Hello, I’m <strong>Sara Ray</strong> the hardest working assistant in
+          the biz!.
         </p>
         <p>
           (This is a sample website - you’ll be building a site like this in{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
+          <a href='https://nextjs.org/learn'>our Next.js tutorial</a>.)
         </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
@@ -36,17 +38,26 @@ export default function Home({ allPostsData }) {
           ))}
         </ul>
       </section>
+      <section>
+        <div>
+          <Image
+            src='/images/landingpage1.webp'
+            alt='Picture of Landing Page One'
+            height={950}
+            width={2300}
+            layout='responsive'
+          />
+        </div>
+      </section>
     </Layout>
-  )
+  );
 }
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData()
+  const allPostsData = getSortedPostsData();
   return {
     props: {
-      allPostsData
-    }
-  }
+      allPostsData,
+    },
+  };
 }
-
-
